@@ -1,0 +1,120 @@
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #2d4059;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    -webkit-text-stroke: 1px rgba(45, 64, 89, 0.5);
+    margin: 1rem auto;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    width: 80vmin;
+    height: 80vmin;
+    justify-items: center;
+    align-items: center;
+}
+
+.cell {
+    background-color: #ffd166;
+    border-radius: 0.5em;
+    display: flex;
+    height: 20vmin;
+    width: 20vmin;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.3);
+    border: none;
+    font-size: 8vmin;
+    color: #073b4c;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #ef476f;
+    transform: scale(1.07);
+    color: #fff !important;
+}
+
+.container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.res {
+    padding: 1rem 2rem;
+    margin: 1rem;
+    font-size: 1.25rem;
+    background-color: #06d6a0;
+    border-radius: 0.5em;
+    border: 1px solid rgba(0, 214, 160, 0.5);
+    color: #073b4c;
+    -webkit-text-stroke: 0.4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.res:hover {
+    background-color: #118ab2;
+    color: #fff;
+}
+
+.status {
+    font-family: 'Fredoka One', 'Arial Black', sans-serif;
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: #ef476f;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.5s ease;
+}
+
+.cell.X {
+    color: #ff006e;
+}
+
+.cell.O {
+    color: #073b4c;
+}
+
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.score {
+    background-color: #06d6a0; /* fresh green */
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
+    color: #073b4c; /* dark text for contrast */
+    font-weight: bold;
+    font-family: 'Fredoka One', 'Arial Black', sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.score:hover {
+    transform: scale(1.05); /* optional subtle pop effect */
+}
+
+#scoreX,#scoreO,#scoreTie{
+    font-family: sans-serif;
+}
